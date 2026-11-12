@@ -1,4 +1,4 @@
-# modular-auv-control
+![tests](https://github.com/Git-hubbre/modular-auv-control/actions/workflows/tests.yml/badge.svg)# modular-auv-control
 
 A hardware-agnostic control stack for a small ROV/AUV, built simulation-first.
 The same controller, guidance and thruster-allocation code is meant to drive a real vehicle later by swapping one class.
