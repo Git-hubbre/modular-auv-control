@@ -17,3 +17,10 @@ Newest entries at the bottom. One short entry per working day.
 ## 2026-11-14 - Day 5
 
 - Added an AUV control glossary explaining added mass, LOS guidance, cross-track error, anti-windup and thruster saturation.
+
+## 2026-11-16 - Day 7
+
+- Added `docs/thrusters.md` (thruster layout and allocation) and `docs/architecture.md` (guidance, navigation, control structure and the hardware boundary).
+- Investigated a pitch dip of about 5 degrees at the start of the depth step, seen in `results/step_response.png`. My first guess was unequal vertical thrust. A controlled experiment, run with Claude's help, showed that was wrong: with no current the four vertical thrusters push equally (about 30 N each) and pitch stays at exactly 0.
+- The cause is the current. It gives the vehicle some forward speed relative to the water, and moving down fast then creates a pitching torque (the Munk moment, from the different added mass in surge and heave). Setting the two added masses equal removed the dip.
+- Open: a roll dip of about 1.5 degrees remains. It is probably a similar sway-and-heave coupling, but I have not tested that. Next idea: check whether a higher pitch gain reduces the dip.
