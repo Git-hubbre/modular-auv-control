@@ -10,10 +10,10 @@ Commit message style: `area: what changed` (example: `docs: add frames diagram`)
 
 ## Week 1 - make the repo look and read well
 
-- [ ] 📱 Add the CI badge to the top of `README.md` (replace `YOU` if your username differs): `![tests](https://github.com/YOU/modular-auv-control/actions/workflows/tests.yml/badge.svg)`
-- [ ] 📱 Create `docs/frames.md`: explain NED world axes (x north, y east, z down), body axes, and why depth is positive down.
-- [ ] 📱 Create `docs/glossary.md`: added mass, Munk moment, LOS guidance, cross-track error, anti-windup, in your own words.
-- [ ] 📱 Create `docs/thrusters.md`: draw the 8-thruster layout as ASCII art and say which thrusters give surge, sway, heave, roll, pitch, yaw.
+- [x] 📱 Add the CI badge to the top of `README.md` (replace `YOU` if your username differs): `![tests](https://github.com/YOU/modular-auv-control/actions/workflows/tests.yml/badge.svg)`
+- [x] 📱 Create `docs/frames.md`: explain NED world axes (x north, y east, z down), body axes, and why depth is positive down.
+- [x] 📱 Create `docs/glossary.md`: added mass, Munk moment, LOS guidance, cross-track error, anti-windup, in your own words.
+- [x] 📱 Create `docs/thrusters.md`: draw the 8-thruster layout as ASCII art and say which thrusters give surge, sway, heave, roll, pitch, yaw.
 - [ ] 📱 Create `docs/tuning.md`: for each gain in `auv/controller.py`, write what happens when you raise or lower it (try it first, then write what you saw).
 - [ ] 📱 Add a one-line comment above every gain in `Gains` saying its units.
 - [ ] 📱 Open 5 GitHub Issues from the roadmap in `README.md` and label them `enhancement`.
