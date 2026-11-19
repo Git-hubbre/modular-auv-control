@@ -24,3 +24,10 @@ Newest entries at the bottom. One short entry per working day.
 - Investigated a pitch dip of about 5 degrees at the start of the depth step, seen in `results/step_response.png`. My first guess was unequal vertical thrust. A controlled experiment, run with Claude's help, showed that was wrong: with no current the four vertical thrusters push equally (about 30 N each) and pitch stays at exactly 0.
 - The cause is the current. It gives the vehicle some forward speed relative to the water, and moving down fast then creates a pitching torque (the Munk moment, from the different added mass in surge and heave). Setting the two added masses equal removed the dip.
 - Open: a roll dip of about 1.5 degrees remains. It is probably a similar sway-and-heave coupling, but I have not tested that. Next idea: check whether a higher pitch gain reduces the dip.
+
+## 2026-11-19 - Day 10
+
+- Ran a gain sensitivity sweep on the depth and heading controllers (each gain x0.5 and x2) on the step test.
+- Depth and heading loops don't affect each other. Doubling depth kp settles in 2.4 s but saturates a thruster at 40 N.
+- Heading kp x2 beat my baseline (1.9% overshoot, 1.5 s settling), so my heading gains were too conservative.
+- Next: write this up in docs/tuning.md in my own words and try heading kp x2 as the new default.
